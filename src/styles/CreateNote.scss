@@ -33,8 +33,9 @@
           -webkit-user-select: none;
           touch-action: manipulation;
           position: relative;
-          margin-top: 1rem;
+          margin-top: 0.2rem;
           margin-left: 543px;
+          position: absolute;
         
         &:hover {
           box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;

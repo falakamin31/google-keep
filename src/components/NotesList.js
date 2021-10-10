@@ -1,9 +1,17 @@
 import React from 'react'
-
-const NotesList = () => {
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import "../styles/NoteList.scss"
+const NotesList = (props) => {
     return (
-        <div>
-        </div>
+        <>
+            <div className="note">    
+            <h3>{props.title}</h3>
+            <p>{props.content} </p>
+            <button>
+            <DeleteOutlineIcon/>
+            </button>
+            </div>
+            </>
     )
 }
 
