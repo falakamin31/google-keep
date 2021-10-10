@@ -1,0 +1,46 @@
+.note_list {
+    width:100%;
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.note {
+    min-width: 250px;
+    height: 7rem;
+    border: 1px solid #ebebeb;
+    padding: 1rem;
+    margin: 1rem;
+    position: relative; 
+
+    &:hover {
+        // box-shadow:0 4px 4px #7b7e7e;
+        box-shadow:0 8px 8px #cdcfcf;
+
+
+    }
+}
+.note h3 {
+    letter-spacing: .00625em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+.note button {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    color:gray;
+
+    &:hover {
+        color: black;
+        cursor: pointer;
+
+
+    }
+    }
+
+
