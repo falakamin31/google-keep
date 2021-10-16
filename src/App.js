@@ -14,18 +14,30 @@ const App = () => {
       [...prevData,note]
     )
     })
-    console.log(note);
+ }
+ const onDelete = (id) =>{
+  setAddItem((oldData)  =>
+    oldData.filter((currdata, index) =>{
+      return (index !== id);
+    })
+  ) 
+   
  }
 
   return (
     <div className="container">
       <Header />
       <CreateNote addNote={addNote}/>
-      <div id="notes_list">
+      <div className="notes_list">
 
       {
         addItem.map((itemVal,index) =>{
-          return <NotesList title={itemVal.title} content={itemVal.content} key={index} id={index} />
+          return <NotesList
+           title={itemVal.title}
+            content={itemVal.content}
+             key={index}
+              id={index}
+              deleteItem = {onDelete} />
         })
       }
       </div>

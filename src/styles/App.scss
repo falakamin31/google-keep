@@ -3,13 +3,19 @@
     padding: 0%;
     box-sizing: border-box;
 }
-#notes_list {
-    height: 100vh;
+
+.container 
+{
+    height:100vh;
     width: 100vw;
-    margin-top: 50px;
+}
+.notes_list {
     display: flex;
-    margin-left: 2px;
     align-items: center;
-    word-wrap: break-word;
+    position: relative;
+    top: 37px;
+    flex-wrap: wrap;
+
+    // word-wrap: break-word;
     
 }
