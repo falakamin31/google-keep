@@ -10,12 +10,11 @@ const CreateNote = (props) => {
 const inputEventHandle = (e) =>{
     const {name ,value } =e.target;
 
+
     setNote((prevData) =>{
     return {
         ...prevData,
         [name] :value,
-        
-
     }
     
      });
@@ -23,6 +22,9 @@ const inputEventHandle = (e) =>{
 }
 
     const addEvent = () =>{
+        if (note.title.length <= 0 && note.content.length <=0) {
+            return;
+        }
             props.addNote(note);
             setNote({
                 title :"",
@@ -37,7 +39,7 @@ const inputEventHandle = (e) =>{
     
     return (
         <div className="note_container">
-            <form>
+            <form onSubmit={(event)=> {event.preventDefault()}}>
                 { expand ?
                 <input type="text" value={note.title} onChange={inputEventHandle} name="title" placeholder="Title" autoComplete="off" />
                 :null}
